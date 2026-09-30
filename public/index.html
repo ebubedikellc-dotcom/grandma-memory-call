@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Grandma Memory Call</title>
+    <meta name="description" content="Render-hosted control panel for Android-assisted Grandma memory WhatsApp birthday calls.">
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+    <div class="shell">
+      <header class="topbar">
+        <a class="brand" href="/">
+          <span class="mark">G</span>
+          <span>Grandma Memory Call</span>
+        </a>
+        <nav class="nav" aria-label="Navigation">
+          <a href="/">Control Panel</a>
+          <a href="/helper.html">Browser Helper</a>
+        </nav>
+      </header>
+
+      <main>
+        <section class="hero">
+          <div class="panel">
+            <div class="eyebrow">Android APK + Render</div>
+            <h1>Prepare the birthday WhatsApp call.</h1>
+            <p>
+              Render holds the control panel. Your Android Worker APK receives the job, opens WhatsApp, sends the birthday message, and guides the video call from your phone.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>What works on Android</h3>
+            <div class="status">
+              <div class="status-row">
+                <span>APK receives call job from Render</span>
+                <span class="pill good">Works</span>
+              </div>
+              <div class="status-row">
+                <span>Open WhatsApp chat by number</span>
+                <span class="pill good">Works</span>
+              </div>
+              <div class="status-row">
+                <span>Send birthday write-up as chat text</span>
+                <span class="pill good">Works</span>
+              </div>
+              <div class="status-row">
+                <span>Force WhatsApp video call automatically</span>
+                <span class="pill">Manual tap</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="grid">
+          <div class="card">
+            <h2>Create birthday call job</h2>
+            <form class="form" id="jobForm">
+              <div class="field">
+                <label for="pairCode">Android Worker pair code</label>
+                <input id="pairCode" maxlength="12">
+              </div>
+              <div class="field">
+                <label for="grandmaName">Grandma name</label>
+                <input id="grandmaName" value="Grandma">
+              </div>
+              <div class="field">
+                <label for="sisterName">Birthday person name</label>
+                <input id="sisterName" value="Sister">
+              </div>
+              <div class="field">
+                <label for="sisterPhone">Sister WhatsApp number with country code</label>
+                <input id="sisterPhone" inputmode="tel" placeholder="+2348012345678">
+              </div>
+              <div class="field">
+                <label for="grandmaPhoto">Grandma picture</label>
+                <input id="grandmaPhoto" type="file" accept="image/*">
+              </div>
+              <div class="field">
+                <label for="birthdayMessage">Message to send in WhatsApp chat</label>
+                <textarea id="birthdayMessage">Happy birthday, my daughter. I love you and I am praying for you always.</textarea>
+              </div>
+              <button class="primary" type="submit">Send job to Android Worker</button>
+            </form>
+
+            <div class="warn hidden" id="createdBox" style="margin-top: 14px;">
+              <p id="createdText"></p>
+              <p style="margin-top: 8px;"><a id="helperLink" href="/helper.html">Open Android helper</a></p>
+            </div>
+          </div>
+
+          <div class="phone-preview">
+            <div class="phone">
+              <div class="screen">
+                <div>
+                  <div class="avatar" id="previewAvatar">G</div>
+                  <h3 id="sisterPreview">Sister sees Grandma</h3>
+                  <p>WhatsApp video call</p>
+                  <div class="message-bubble" id="messagePreview">Message sent in WhatsApp chat first</div>
+                  <p style="margin-top: 10px;" id="numberPreview">Add WhatsApp number</p>
+                </div>
+                <div class="call-actions">
+                  <span class="round decline">End</span>
+                  <span class="round accept">Call</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="card" style="margin-bottom: 34px;">
+          <h3>Plain truth</h3>
+          <p>
+            This version makes the Android Worker receive the job and open WhatsApp. Android still will not let an ordinary app secretly take over WhatsApp's camera or force the video call button. For the full live face replacement, the next layer must be a special camera/video engine.
+          </p>
+        </section>
+      </main>
+    </div>
+    <script src="/app.js"></script>
+  </body>
+</html>
