@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Browser Helper</title>
+    <meta name="description" content="Browser helper fallback for Grandma Memory Call.">
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+    <div class="shell">
+      <header class="topbar">
+        <a class="brand" href="/">
+          <span class="mark">G</span>
+          <span>Browser Helper</span>
+        </a>
+        <nav class="nav" aria-label="Navigation">
+          <a href="/">Control Panel</a>
+          <a href="/helper.html">Browser Helper</a>
+        </nav>
+      </header>
+
+      <main>
+        <section class="hero">
+          <div class="panel">
+            <div class="eyebrow">Backup browser helper</div>
+            <h1>Test the birthday job without installing the APK.</h1>
+            <p>
+              Enter the same pair code shown in the control panel. This page pulls the latest job from Render and prepares the WhatsApp message link.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Pair code</h3>
+            <div class="form">
+              <div class="field">
+                <label for="pairCode">Code from control panel</label>
+                <input id="pairCode" maxlength="12">
+              </div>
+              <button id="loadJob" class="primary" type="button">Load latest job</button>
+              <p id="statusText">Waiting for a birthday call job from the control panel.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="grid">
+          <div class="card">
+            <div id="emptyBox">
+              <h2>No job yet</h2>
+              <p>Create a birthday call job on the control panel, then open the APK Worker or keep this browser helper open.</p>
+            </div>
+
+            <div id="jobBox" class="helper-job hidden">
+              <h2 id="jobTitle">Birthday call</h2>
+              <p id="jobPhone"></p>
+              <img id="photo" class="photo hidden" alt="Grandma photo">
+              <div class="warn">
+                <strong>Message to send first</strong>
+                <p id="jobMessage"></p>
+              </div>
+              <a class="button gold" id="waMessage" target="_blank" rel="noreferrer">Open WhatsApp with message</a>
+              <a class="button" id="waChat" target="_blank" rel="noreferrer">Open WhatsApp chat only</a>
+              <button class="primary" id="markStarted" type="button">I started the video call</button>
+              <p id="waCallNote"></p>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3>How to use the Android phone</h3>
+            <div class="status">
+              <div class="status-row">
+                <span>Open helper page</span>
+                <span class="pill good">1</span>
+              </div>
+              <div class="status-row">
+                <span>Load job by pair code</span>
+                <span class="pill good">2</span>
+              </div>
+              <div class="status-row">
+                <span>Open WhatsApp with message</span>
+                <span class="pill good">3</span>
+              </div>
+              <div class="status-row">
+                <span>Tap video call in WhatsApp</span>
+                <span class="pill good">4</span>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+    <script src="/helper.js"></script>
+  </body>
+</html>
