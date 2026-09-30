@@ -1,0 +1,8 @@
+node_modules/
+.DS_Store
+*.log
+android-worker/.gradle/
+android-worker/build/
+android-worker/app/build/
+local.properties
+
