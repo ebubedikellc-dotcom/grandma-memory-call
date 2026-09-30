@@ -1,0 +1,15 @@
+workflows:
+  android-debug-apk:
+    name: Grandma Memory Worker APK
+    max_build_duration: 30
+    instance_type: mac_mini_m2
+    environment:
+      java: 17
+    scripts:
+      - name: Build Android debug APK
+        script: |
+          cd android-worker
+          gradle wrapper --gradle-version 8.7
+          ./gradlew assembleDebug
+    artifacts:
+      - android-worker/app/build/outputs/apk/debug/*.apk
