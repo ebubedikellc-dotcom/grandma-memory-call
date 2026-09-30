@@ -1,0 +1,13 @@
+{
+  "name": "grandma-memory-call-render-android",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Render-hosted control panel with Android Worker source for a Grandma memory WhatsApp birthday call.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
